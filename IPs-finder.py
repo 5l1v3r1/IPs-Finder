@@ -62,7 +62,7 @@ if check() == True:
 	     if checker() == True:
 		print("\n\n[*]Finding All [> %s <] Site IP Addresses......... \n" %(target))
 		sleep(2.1)
-		print("\n:::>Found<:::\n")
+		print("\n[+]:Found\n------------------------------")
 		for address_type in ['A', 'AAAA']:
  			try:
             			answers = dns.resolver.query(target, address_type)
