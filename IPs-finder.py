@@ -47,7 +47,7 @@ if check() == True:
 [+]:Enter target WebSite:> """)
 	sleep(1.5)
 	if target == '' or target is None:
-		print("\n[!]Please Enter website: e.g:- www.facebook.com!")
+		print("\n[!]:Please Enter website: e.g:- www.facebook.com!")
 		exit(0)
 	else:
 	     def checker():
@@ -60,16 +60,20 @@ if check() == True:
 	       return False
 
 	     if checker() == True:
-		print("\n\n[*]Finding All [> %s <] Site IP Addresses......... \n" %(target))
+		loob = 1
+		print("\n\n[*]:Finding All [> %s <] Site IP Addresses......... \n" %(target))
 		sleep(2.1)
 		print("\n[+]:Found\n------------------------------")
 		for address_type in ['A', 'AAAA']:
  			try:
             			answers = dns.resolver.query(target, address_type)
             			for rdata in answers:
-                			print(rdata)
+					print("WebServer:[%s] %s"%(loob,rdata))
+					loob +=1
         		except dns.resolver.NoAnswer:
 			     pass
+		dd = loob -1
+		print("\n\n[+]:This Target WebSite Have A [%s] WebServer!"%(dd))
 		print("")
 	     elif checker() == False:
 			print("\n[!>] %s [<!>]Error:404 Server Not Found!"%(target))
@@ -77,6 +81,8 @@ if check() == True:
 elif check() == False:
 	print("\n[!]Please Connect to the internet and try again :)")
 	exit(0)
+
+
 
 ##############################################################
 ##################### 		     #########################
