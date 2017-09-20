@@ -9,9 +9,9 @@ try:								 #
    import dns.resolver,socket  					 #
    from os import system				         #
    from time import sleep				         #
-except:							         #
-      print("\n[!]Some Module is Not Found in Python Modules\n") #
-      exit(0)						         #
+except:							         ################################################
+      print("\n[!]the [ dnspython lib ] is not found!\n[*]Please run this command [ pip install dnspython ]\n") #
+      exit(0)						         ################################################
 #================================================================#
 
 
