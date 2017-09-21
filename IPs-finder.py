@@ -73,7 +73,7 @@ if check() == True:
         		except dns.resolver.NoAnswer:
 			     pass
 		dd = loob -1
-		print("\n\n[+]:This Target WebSite Has [%s] WebServer!"%(dd))
+		print("\n\n[+]:This Target WebSite Has [%s] WebServer! [UP]"%(dd))
 		print("")
 	     elif checker() == False:
 			print("\n[!>] %s [<!>]Error:404 Server Not Found!"%(target))
