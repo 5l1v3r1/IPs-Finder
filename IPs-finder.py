@@ -44,7 +44,7 @@ if check() == True:
 [---]	     ve:    1.0		     [---]
 ==========================================
 
-[+]:Enter target WebSite:> """)
+[+]:Enter Target WebSite:> """)
 	sleep(1.5)
 	if target == '' or target is None:
 		print("\n[!]:Please Enter website: e.g:- www.facebook.com!")
@@ -73,7 +73,7 @@ if check() == True:
         		except dns.resolver.NoAnswer:
 			     pass
 		dd = loob -1
-		print("\n\n[+]:This Target WebSite Have A [%s] WebServer!"%(dd))
+		print("\n\n[+]:This Target WebSite Has [%s] WebServer!"%(dd))
 		print("")
 	     elif checker() == False:
 			print("\n[!>] %s [<!>]Error:404 Server Not Found!"%(target))
