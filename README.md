@@ -1,6 +1,6 @@
-# IPs-Finder
+# IPs-FinderV2.0
 
-- A python script for find all the live IP addresses of the target website (^-^) 
+- Simply python script for find Website IPADDRESSES and your Local IP and your Public IP Address (^-^)
 
 - Tool ScreenShot
 
