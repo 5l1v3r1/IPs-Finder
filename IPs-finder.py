@@ -126,7 +126,7 @@ def locip():
             exit()
 
 def randomsay():
-     say = ["GoodBye","See you later","Have a naice day"]
+     say = ["GoodBye","See you later","Have a nice day"]
      rsay = random.choice(say)
      return rsay
 rsay = randomsay()
