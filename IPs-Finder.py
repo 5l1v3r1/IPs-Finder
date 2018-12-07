@@ -40,11 +40,10 @@ def web():
 	if check() == True:
 		target = raw_input("[+]:Enter target WebSite:> ")
 		sleep(1.5)
-		if target == '' or target is None:
+		while target == "" or target is None:
 			print("\n[!]:Please Enter website: e.g:- www.facebook.com!\n")
-			web()
-		else:
-		     def checker():
+			target = raw_input("[!] Enter target WebSite?:> ")
+		def checker():
 			try:
 			   if target[:8] == "https://":
 				host = target[8:]
@@ -59,8 +58,8 @@ def web():
 		        except:
 			      pass
 		        return False
-
-		     if checker() == True:
+		
+		if checker() == True:
 
                         if target[:8] == "https://":
                                 host = target[8:]
@@ -96,8 +95,7 @@ def web():
 			    print("\nExiting.......")
                             sleep(2)
 			    exit(1)
-
-		     elif checker() == False:
+		elif checker() == False:
 				print("\n[x]Error:404 Server Not Found!\n[x]:This Target[> {} <]Website not Found ".format(target))
 				print("\n")
 				web()
