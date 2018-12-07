@@ -121,19 +121,20 @@ def ppip():
             exit()
 
 def locip():
-	if check() == True:
-
 	   print("\n[*]:Finding Your Local IP...... ")
 	   sleep(2)
-	   locip = [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]
-	   print("[#]:Found\n------------------")
-	   print("[+]:YOUR Local IP: {}".format(locip))
-	   press = raw_input("\nPress Enter To back to Main Menu")
-	   system("clear || cls")
-	   main()
-
+	if check() == True:
+		locip = [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]
 	else:
-	    print("\n[!]:Ops Your Not Connected To Any Network\n[*]:Please Connected To Some Network and Try Agian")
+		locip = socket.gethostbyname(socket.gethostname())
+	if locip !="127.0.0.1":
+		print("[#]:Found\n------------------")
+		print("[+]:YOUR Local IP: {}".format(locip))
+		press = raw_input("\nPress Enter To back to Main Menu")
+		system("clear || cls")
+		main()
+	else:
+	    print("\n[!] Sorry I Cant Found Your Local Ip!\n[*] Maybe If You Change Your HostName I Can Find It :)")
             exit()
 
 def randomsay():
