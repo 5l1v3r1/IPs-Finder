@@ -39,10 +39,10 @@ def check():
 def web():
 	if check() == True:
 		target = raw_input("[+]:Enter target WebSite:> ")
-		sleep(1.5)
 		while target == "" or target is None:
 			print("\n[!]:Please Enter website: e.g:- www.facebook.com!\n")
 			target = raw_input("[!] Enter target WebSite?:> ")
+	        sleep(1.5)
 		def checker():
 			try:
 			   if target[:8] == "https://":
@@ -119,8 +119,8 @@ def ppip():
             exit()
 
 def locip():
-	   print("\n[*]:Finding Your Local IP...... ")
-	   sleep(2)
+        print("\n[*]:Finding Your Local IP...... ")
+        sleep(2)
 	if check() == True:
 		locip = [(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]
 	else:
@@ -185,7 +185,6 @@ def main():
 
 if __name__=='__main__':
 	main()
-
 ##############################################################
 ##################### 		     #########################
 #####################  END OF SCRIPT #########################
@@ -194,6 +193,3 @@ if __name__=='__main__':
 #This Script by Oseid Aldary
 #Have a nice day :)
 #GoodBye
-
-
-
